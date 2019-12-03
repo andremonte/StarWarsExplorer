@@ -1,0 +1,9 @@
+.bgImage {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(../../assets/images/estrela.jpeg) center center / cover;
+}
+
+button:hover {
+  background-color: white !important;
+  color: black!important;
+}
