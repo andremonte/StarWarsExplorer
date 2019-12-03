@@ -1,4 +1,3 @@
-
 <div *ngIf="person">
 <h2 class="text-center"><span>Person:</span> {{person.name}}</h2>
 <form>
@@ -61,65 +60,10 @@
         </div>
     </div>
 </form>
-</div>
 
-<div *ngIf="planet">
-<h2 class="text-center">Planet: {{planet[0].name}}</h2>
-<form>
-    <div class="container-fluid justify-content-center">
-        <div class="row justify-content-center">
-            <div class="col-xl-6 col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Terrain:</label>
-                    <input type="text" class="form-control"  placeholder="{{planet[0].terrain}}">
-                </div>
-            </div>
-        </div>
 
-        <div class="row justify-content-center">
-            <div class="col-xl-6 col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Population:</label>
-                    <input type="text" class="form-control" 
-                        placeholder="{{planet[0].population}}">
-                </div>
-            </div>
-        </div>
-    </div>
-</form>
-</div>
 
-<div *ngIf="movie">
-<h2 class="text-center">Movie: {{movie.title}}</h2>
-<form>
-    <div class="container-fluid justify-content-center">
-        <div class="row justify-content-center">
-            <div class="col-xl-6 col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Director:</label>
-                    <input type="text" class="form-control" placeholder="{{movie.director}}">
-                </div>
-            </div>
-        </div>
 
-        <div class="row justify-content-center">
-            <div class="col-xl-6 col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Producers:</label>
-                    <input type="text" class="form-control" placeholder="{{movie.producer}}">
-                </div>
-            </div>
-        </div>
 
-        <div class="row justify-content-center">
-            <div class="col-xl-6 col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Release Date:</label>
-                    <input type="text" class="form-control"
-                        placeholder="{{movie.release_date}}">
-                </div>
-            </div>
-        </div>
-    </div>
-</form>
-</div>
+
+

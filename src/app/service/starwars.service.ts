@@ -43,27 +43,21 @@ export class StarwarsService {
     console.log('ˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆ' + this.id);
   }
 
-  poita(numb: number): Observable<any> {
-    console.log("##$#$#$#" + this.id);
-    //TROCAR PARA DINAMICO
+  getPeople(numb: number): Observable<any> {
     let url = `https://api.codetabs.com/v1/proxy?quest=https://swapi.co/api/people/${numb}`;
     console.log(this.id);
     return this.http.get<{ people: People[] }>(url);
   }
 
-  getPlanet(numb: number) {
-    console.log("##$#$#$#" + this.id);
-    //TROCAR PARA DINAMICO
+  getPlanet(numb: number): Observable<any> {
     let url = `https://api.codetabs.com/v1/proxy?quest=https://swapi.co/api/planets/${numb}`;
     console.log(this.id);
-    return this.http.get<{ people: People[] }>(url);
+    return this.http.get<{ planet: Planet[] }>(url);
   }
 
-  getMovie(numb: number) {
-    console.log("##$#$#$#" + this.id);
-    //TROCAR PARA DINAMICO
+  getMovie(numb: number): Observable<any> {
     let url = `https://api.codetabs.com/v1/proxy?quest=https://swapi.co/api/films/${numb}`;
     console.log(this.id);
-    return this.http.get<{ people: People[] }>(url);
+    return this.http.get<{ movie: Movie[] }>(url);
   }
 }

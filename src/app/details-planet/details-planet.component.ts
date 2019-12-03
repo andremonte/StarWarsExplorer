@@ -10,16 +10,15 @@ import { StarwarsService } from '../service/starwars.service';
 export class DetailsPlanetComponent implements OnInit {
 
   constructor(private activatedRoute:ActivatedRoute, private starwarsServ:StarwarsService) { }
-  private movie;
+  private planet;
   private id: number;
   ngOnInit() {
     
     const id = this.activatedRoute.snapshot.paramMap.get('id');
-    console.log('LARISSA! '+id);
     this.id = +id;
-    this.starwarsServ.poita(this.id)
+    this.starwarsServ.getPlanet(this.id)
       .subscribe(data => {
-        { this.movie = (data); console.log(data) }
+        { this.planet = (data); console.log(data) }
       })
   }
 

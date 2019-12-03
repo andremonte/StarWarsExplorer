@@ -1,6 +1,7 @@
 import { StarwarsService } from './../service/starwars.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { People } from '../service/models/people.model';
 
 
 @Component({
@@ -10,19 +11,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
   person;
-  planet;
-  movie;
   private id: number;
   constructor(private starwarsServ: StarwarsService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     
     const id = this.activatedRoute.snapshot.paramMap.get('id');
-    console.log('LARISSA! '+id);
     this.id = +id;
-    this.starwarsServ.poita(this.id)
+    this.starwarsServ.getPeople(this.id)
       .subscribe(data => {
-        { this.person = (data); console.log(data['name']) }
+        { this.person = (data); console.log(data['name']);}
       })
   }
 }
