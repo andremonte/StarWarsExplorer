@@ -1,0 +1,35 @@
+mat-form-field {
+  width: 65%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+table {
+  width: 100%;
+}
+mat-form-field input {
+  color: black !important;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: white !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: #0056b3 !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: #0056b3 !important;
+}
+
+input{
+  background-color: white !important;
+  min-height: 50%;
+}
+
