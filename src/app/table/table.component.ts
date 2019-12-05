@@ -21,7 +21,8 @@ export class TableComponent implements OnInit {
   private planets: Planet[] = [];
   private movies: Movie[] = [];
   private route: string = "";
- 
+  private showSpinner: Boolean = true;
+
   constructor(private starWarsServ: StarwarsService, private activatedRoute:ActivatedRoute, private router:Router) { }
 
   displayedColumns: string[] = ['name', 'height', 'mass', 'hair_color', 'skin_color', 'gender', 'birth_year'];
@@ -42,8 +43,9 @@ export class TableComponent implements OnInit {
       try {
         this.starWarsServ.getByContent(`${this.route}`)
         .subscribe(data => {
-          {this.people = data['results']; this.dataSource = new MatTableDataSource(this.people); /* this.dataSource.sort = this.sort; */ setTimeout(() => this.dataSource.paginator = this.paginator);  console.log(data.results);}
+          {this.people = data['results']; this.dataSource = new MatTableDataSource(this.people); /* this.dataSource.sort = this.sort; */ setTimeout(() => this.dataSource.paginator = this.paginator); this.showSpinner = false; console.log(data.results);}
         })
+        
       }
       catch(err) {
         throw err;
@@ -53,7 +55,7 @@ export class TableComponent implements OnInit {
       try {
         this.starWarsServ.getByContent(`${this.route}`)
         .subscribe(data => {
-          {this.planets = data['results']; this.dataSource = new MatTableDataSource(this.planets); /* this.dataSource.sort = this.sort; */ setTimeout(() => this.dataSource.paginator = this.paginator);  console.log(data.results);}
+          {this.planets = data['results']; this.dataSource = new MatTableDataSource(this.planets); /* this.dataSource.sort = this.sort; */ setTimeout(() => this.dataSource.paginator = this.paginator); this.showSpinner = false; console.log(data.results);}
         })
       }
       catch(err) {
@@ -64,7 +66,7 @@ export class TableComponent implements OnInit {
       try {
         this.starWarsServ.getByContent(`${this.route}`)
         .subscribe(data => {
-          {this.movies = data['results']; this.dataSource = new MatTableDataSource(this.movies); /* this.dataSource.sort = this.sort; */ setTimeout(() => this.dataSource.paginator = this.paginator);  console.log(data.results);}
+          {this.movies = data['results']; this.dataSource = new MatTableDataSource(this.movies); /* this.dataSource.sort = this.sort; */ setTimeout(() => this.dataSource.paginator = this.paginator); this.showSpinner = false; console.log(data.results);}
         })
       }
       catch(err) {
