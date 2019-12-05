@@ -5,6 +5,11 @@ h2 {
 label {
     color:white;
 }
-span {
-    color:#493f3f;
-}
+.white-border {
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+  }
