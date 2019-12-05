@@ -6,9 +6,14 @@
       </mat-form-field>
     </div>
   </div>
+  <div class="row text-center justify-content-center">
+    <div class="col-xl-2col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        <mat-spinner *ngIf="showSpinner"></mat-spinner>
+    </div></div>
 </div>
+
 <!-- PEOPLE TABLE -->
-<div *ngIf="people.length > 0" class="container-fluid">
+<div *ngIf="people.length > 0" class="container-fluid pt-1 pb-2">
   <div class="row text-center justify-content-center">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <i class="text-success far fa-user fa-3x"></i>
