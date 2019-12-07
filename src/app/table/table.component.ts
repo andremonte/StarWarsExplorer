@@ -37,13 +37,15 @@ export class TableComponent implements OnInit {
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
 
   ngOnInit() {
+    //Getting the URL
     const path = new URL(window.location.href);
+    //Getting the if user is acessing people/ planets or moves.
     this.route = (path.pathname.toString());
     if(this.route == '/people') {
       try {
         this.starWarsServ.getByContent(`${this.route}`)
         .subscribe(data => {
-          {console.log('type of data is: '+typeof(+data['results'])); console.log(data); this.people = data['results']; this.dataSource = new MatTableDataSource(this.people); /* this.dataSource.sort = this.sort; */ setTimeout(() => this.dataSource.paginator = this.paginator); this.showSpinner = false; console.log(data.results);}
+          {console.log(data); this.people = data['results']; this.dataSource = new MatTableDataSource(this.people); /* this.dataSource.sort = this.sort; */ setTimeout(() => this.dataSource.paginator = this.paginator); this.showSpinner = false; console.log(data.results);}
         })
         
       }
