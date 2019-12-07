@@ -43,7 +43,7 @@ export class TableComponent implements OnInit {
       try {
         this.starWarsServ.getByContent(`${this.route}`)
         .subscribe(data => {
-          {this.people = data['results']; this.dataSource = new MatTableDataSource(this.people); /* this.dataSource.sort = this.sort; */ setTimeout(() => this.dataSource.paginator = this.paginator); this.showSpinner = false; console.log(data.results);}
+          {console.log('type of data is: '+typeof(+data['results'])); console.log(data); this.people = data['results']; this.dataSource = new MatTableDataSource(this.people); /* this.dataSource.sort = this.sort; */ setTimeout(() => this.dataSource.paginator = this.paginator); this.showSpinner = false; console.log(data.results);}
         })
         
       }

@@ -10,8 +10,8 @@
 
 <div class="container-fluid">
   <div class="row justify-content-center">
-    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-        <mat-spinner diameter="65" *ngIf="showSpinner"></mat-spinner>
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <mat-spinner class="centro" diameter="65" *ngIf="showSpinner"></mat-spinner>
     </div>
   </div>
 </div>
@@ -117,8 +117,7 @@
         <tr mat-row (click)="detailPlanet(row)" *matRowDef="let row; columns: displayedPlanetColumns;"></tr>
       </table>
 
-      <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
-      </mat-paginator>
+      <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 
     </div>
   </div>
@@ -166,8 +165,7 @@
         <tr mat-row (click)="detailMovie(row)" *matRowDef="let row; columns: displayedMovieColumns;"></tr>
       </table>
 
-      <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
-      </mat-paginator>
+      <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"> </mat-paginator>
 
     </div>
   </div>
