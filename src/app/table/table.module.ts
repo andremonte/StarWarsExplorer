@@ -18,7 +18,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatSortModule,
     MatInputModule,
     MatPaginatorModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
     
   ],
   exports:[TableComponent]

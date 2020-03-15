@@ -17,11 +17,11 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-  private people: People[] = [];
-  private planets: Planet[] = [];
-  private movies: Movie[] = [];
-  private route: string = "";
-  private showSpinner: Boolean = true;
+    people: People[] = [];
+    planets: Planet[] = [];
+    movies: Movie[] = [];
+    route: string = "";
+    showSpinner: Boolean = true;
 
   constructor(private starWarsServ: StarwarsService, private activatedRoute:ActivatedRoute, private router:Router) { }
 
