@@ -12,9 +12,8 @@ import { Movie } from './models/movie.model';
 export class StarwarsService {
   constructor(private http: HttpClient) { }
 
-  private url: string = "https://api.codetabs.com/v1/proxy?quest=https://swapi.dev/api";
+  private url: string = "https://api.codetabs.com/v1/proxy?quest=https://swapi.dev/api/";
   private result;
-  private pp;
   public id: string = '';
 
   sendPath = new Subject()
