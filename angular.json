@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "StarWarsExplorer"
+  "defaultProject": "StarWarsExplorer",
+  "cli": {
+    "analytics": false
+  }
 }
