@@ -31,10 +31,10 @@ export class TableComponent implements OnInit {
 
   dataSource = new MatTableDataSource();
 
-  @ViewChild(MatSort, {static: false}) set content(sort: MatSort){
+  @ViewChild(MatSort) set content(sort: MatSort){
     this.dataSource.sort = sort;
   };
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit() {
     //Getting the URL

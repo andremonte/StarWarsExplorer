@@ -12,7 +12,7 @@ import { Movie } from './models/movie.model';
 export class StarwarsService {
   constructor(private http: HttpClient) { }
 
-  private url: string = "https://api.codetabs.com/v1/proxy?quest=https://swapi.co/api/";
+  private url: string = "https://api.codetabs.com/v1/proxy?quest=https://swapi.dev/api";
   private result;
   private pp;
   public id: string = '';
@@ -37,9 +37,9 @@ export class StarwarsService {
 
   setId(id: string) {
     this.id = id;
-    
+
     this.sendPath.next(this.id);
-    
+
     console.log('ˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆ' + this.id);
   }
 
