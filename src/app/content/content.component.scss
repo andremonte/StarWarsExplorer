@@ -1,13 +1,23 @@
 .bgImage {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url(../../assets/images/estrela.jpeg) center center / cover;
+<<<<<<< HEAD
     min-height: 100vh;
     display: flex;
     display: center;
     max-height: auto; /*se quiser margem branca*/
+=======
+    height: 100vh;
+    display: flex;
+    display: center;
+>>>>>>> 0072b9107ce997671c8acc305e659bb0807aa15d
 }
 
 button:hover {
   background-color: white !important;
+<<<<<<< HEAD
   color: rgb(66, 82,175)!important;
+=======
+  color: black!important;
+>>>>>>> 0072b9107ce997671c8acc305e659bb0807aa15d
 }

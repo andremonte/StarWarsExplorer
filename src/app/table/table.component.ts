@@ -17,11 +17,19 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
+<<<<<<< HEAD
     people: People[] = [];
     planets: Planet[] = [];
     movies: Movie[] = [];
     route: string = "";
     showSpinner: Boolean = true;
+=======
+  private people: People[] = [];
+  private planets: Planet[] = [];
+  private movies: Movie[] = [];
+  private route: string = "";
+  private showSpinner: Boolean = true;
+>>>>>>> 0072b9107ce997671c8acc305e659bb0807aa15d
 
   constructor(private starWarsServ: StarwarsService, private activatedRoute:ActivatedRoute, private router:Router) { }
 
@@ -31,6 +39,7 @@ export class TableComponent implements OnInit {
 
   dataSource = new MatTableDataSource();
 
+<<<<<<< HEAD
   @ViewChild(MatSort) set content(sort: MatSort){
     this.dataSource.sort = sort;
   };
@@ -40,11 +49,21 @@ export class TableComponent implements OnInit {
     //Getting the URL
     const path = new URL(window.location.href);
     //Getting the if user is acessing people/ planets or moves.
+=======
+  @ViewChild(MatSort, {static: false}) set content(sort: MatSort){
+    this.dataSource.sort = sort;
+  };
+  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
+
+  ngOnInit() {
+    const path = new URL(window.location.href);
+>>>>>>> 0072b9107ce997671c8acc305e659bb0807aa15d
     this.route = (path.pathname.toString());
     if(this.route == '/people') {
       try {
         this.starWarsServ.getByContent(`${this.route}`)
         .subscribe(data => {
+<<<<<<< HEAD
           {
             console.log(data);
             this.people = data['results'];
@@ -54,6 +73,11 @@ export class TableComponent implements OnInit {
             console.log(data.results);}
         })
 
+=======
+          {this.people = data['results']; this.dataSource = new MatTableDataSource(this.people); /* this.dataSource.sort = this.sort; */ setTimeout(() => this.dataSource.paginator = this.paginator); this.showSpinner = false; console.log(data.results);}
+        })
+        
+>>>>>>> 0072b9107ce997671c8acc305e659bb0807aa15d
       }
       catch(err) {
         throw err;
@@ -81,7 +105,11 @@ export class TableComponent implements OnInit {
         throw err;
       }
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 0072b9107ce997671c8acc305e659bb0807aa15d
   }
 
   applyFilter(filterValue: string) {

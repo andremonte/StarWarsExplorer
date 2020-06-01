@@ -1,6 +1,10 @@
 mat-form-field {
+<<<<<<< HEAD
   width: 100%;
   text-align: center;
+=======
+  width: 60%;
+>>>>>>> 0072b9107ce997671c8acc305e659bb0807aa15d
 }
 
 th.mat-sort-header-sorted {
@@ -28,6 +32,7 @@ table {
 
 input{
   background-color: white !important;
+<<<<<<< HEAD
   height: 35px;
   border-radius: 5px;
 }
@@ -36,3 +41,8 @@ input{
  margin: auto;
  display: block;
 }
+=======
+  min-height: 50%;
+}
+
+>>>>>>> 0072b9107ce997671c8acc305e659bb0807aa15d
