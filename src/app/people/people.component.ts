@@ -11,7 +11,7 @@ import { People } from '../service/models/people.model';
 export class PeopleComponent implements OnInit {
   private people: People[] = [];
   private route: string = 'people';
-  
+
   constructor(private peopleServ: StarwarsService) { }
 
   ngOnInit() {

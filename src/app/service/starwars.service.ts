@@ -14,6 +14,7 @@ export class StarwarsService {
 
   private url: string = "https://api.codetabs.com/v1/proxy?quest=https://swapi.dev/api/";
   private result;
+  private pp;
   public id: string = '';
 
   sendPath = new Subject()
@@ -59,4 +60,5 @@ export class StarwarsService {
     console.log(this.id);
     return this.http.get<{ movie: Movie[] }>(url);
   }
+
 }

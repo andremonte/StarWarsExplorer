@@ -45,9 +45,15 @@ export class TableComponent implements OnInit {
       try {
         this.starWarsServ.getByContent(`${this.route}`)
         .subscribe(data => {
-          {console.log(data); this.people = data['results']; this.dataSource = new MatTableDataSource(this.people); /* this.dataSource.sort = this.sort; */ setTimeout(() => this.dataSource.paginator = this.paginator); this.showSpinner = false; console.log(data.results);}
+          {
+            console.log(data);
+            this.people = data['results'];
+            this.dataSource = new MatTableDataSource(this.people); /* this.dataSource.sort = this.sort; */
+            setTimeout(() => this.dataSource.paginator = this.paginator);
+            this.showSpinner = false;
+            console.log(data.results);}
         })
-        
+
       }
       catch(err) {
         throw err;
@@ -75,7 +81,7 @@ export class TableComponent implements OnInit {
         throw err;
       }
     }
-    
+
   }
 
   applyFilter(filterValue: string) {
